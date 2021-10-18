@@ -1,0 +1,45 @@
+<body>
+    <header>
+      <app-navbar [state]="'LOGIN.TITLE'| translate "></app-navbar>
+    </header>
+    <main class="center">
+      <div>
+          <img src="../../../assets/images/logo_link.png" alt="Mo_Logo" class="login-logo">
+      </div>
+      <div class="mo-card login-card ">
+        <form [formGroup]="singupForm" class="form-size">
+          <h2 class="is-left"> {{"SINGUP.TITLE" | translate }} </h2>
+
+          <div class="input-container">
+            <label position="stacked" class="has-padding-b-1">{{"SINGUP.USER" | translate }}</label>
+            <input type="text" formControlName="name" />
+          </div> 
+
+   
+          <div class="input-container">
+            <label position="stacked" class="has-padding-b-1">{{"LOGIN.USER_TITLE" | translate }}</label>
+            <input type="text" formControlName="email" />
+          </div>
+  
+
+          <div class="input-container">
+            <label position="stacked" class="has-padding-b-1">{{"LOGIN.PASS_TITLE" | translate }}</label>
+            <input type="password" autocomplete="off" formControlName="password" />
+          </div>
+  
+          <button [attr.disabled]="!singupForm.valid ? '' : null"
+            [ngClass]="singupForm.valid?'mo-form-button active':'mo-form-button disabled'" (click)="singup()">
+            {{"SINGUP.BUTTON_FORM" | translate }} </button>
+  
+        </form>
+        <div class="is-full center">
+            <p>
+                {{"SINGUP.FOOTER_COPY" | translate }} <a href="#" >{{"SINGUP.TERMS" | translate }} </a> {{"SINGUP.CONJUCTION" | translate }}  <a href="#">{{"SINGUP.CONDITIONS" | translate }}</a>
+            </p>
+        </div>
+
+      </div>
+  
+    </main>
+  </body>
+  

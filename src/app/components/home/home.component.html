@@ -1,0 +1,37 @@
+<body>
+  <header>
+    <img src="../../../assets/images/logo_link.png" alt="Mo_Logo" class="login-logo">
+    <app-navbar [state]="'HOME.LOGOUT'| translate "></app-navbar>
+  </header>
+  <main>
+    <div class="mo-card profile-card">
+      <img [src]="profile?profile.avatar:''" alt="Avatar_logo" class="login-logo">
+      <label>{{profile?.name}}</label>
+      <label>{{profile?.email}}</label>
+    </div>
+    <div>
+      <div class="mo-card data-card">
+        <form [formGroup]="linkForm" class="form-size">
+          <div class="input-container">
+            <label position="stacked" class="has-padding-b-1">{{"HOME.URL_TITLE" | translate }}</label>
+            <input type="text" formControlName="url2save" />
+          </div>
+          <div class="input-container">
+            <label position="stacked" class="has-padding-b-1">{{"HOME.URL_DESCRIPTION" | translate }}</label>
+            <input type="text" formControlName="nameofurl" />
+          </div>
+          <div class="is-full is-rigth">
+            <button [attr.disabled]="!linkForm.valid ? '' : null"
+              [ngClass]="linkForm.valid?'mo-form-button active':'mo-form-button disabled'" (click)="addLink()">
+              {{"HOME.BUTTON_ADD" | translate }} </button>
+          </div>
+        </form>
+      </div>
+      <div class="mo-card card-link" *ngFor="let item of linksList">
+         <h4 class="title-link has-padding-1">{{item.url}} </h4>
+        <button class="button-trash" (click)="deleteLink(item)"> <img src="../../../assets/images/trash.png" alt="Trash button"> </button>
+        <p class="has-padding-1">{{item.name}} </p>
+      </div>
+    </div>
+  </main>
+</body>

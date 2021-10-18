@@ -1,0 +1,80 @@
+@import "../../../styles/modules/variables";
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr;
+  font-weight: 600;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(370px, auto) 1fr;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.profile-card {
+  width: max(336px, 90%);
+  height: 336px;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  img{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+  }
+}
+.mo-form-button{
+  width: 222px !important;
+}
+.data-card {
+  height: 312px;
+  margin-left: 48px;
+  margin-right: 48px;
+  padding: 60px;
+}
+
+.card-link {
+  height: 120px;
+  margin-left: 48px;
+  margin-right: 48px;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 90% 10%;
+}
+.title-link{
+  font-size: 32px;
+  line-height: 20px;
+  margin: 0;
+  color: $color-primary;
+ 
+}
+.button-trash{
+  outline: 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  img {
+    width: 32px;
+    height: 39px;
+  }
+}
+@media screen and (max-width: 570px) {
+  main {
+    display: block;
+  }
+  .data-card{
+    margin-top: 1rem;
+  }
+}

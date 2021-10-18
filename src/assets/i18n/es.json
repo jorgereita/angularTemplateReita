@@ -1,0 +1,42 @@
+
+{
+
+    "LOGIN": {
+        "TITLE": "Login",
+        "USER_TITLE": "Your Email",
+        "PASS_TITLE": "Password",
+        "BUTTON_FORM": "Login"
+    },
+    "SINGUP": {
+        "TITLE": "SINGUP",
+        "USER": "Full Name",
+        "BUTTON_FORM": "SINGUP",
+        "FOOTER_COPY": "By Creating account You agree to the ",
+        "TERMS": "Terms of use ",
+        "CONJUCTION": " and ",
+        "CONDITIONS": " Privacy policy"
+    },
+    "HOME":{
+        "URL_TITLE": "Url To Save",
+        "URL_DESCRIPTION": "Name of Url",
+        "BUTTON_ADD": "ADD",
+        "LOGOUT": "LOGOUT"
+    },
+    "NAV":{
+        "LOG_IN": "LOGIN",
+        "LOG_OUT": "LOGOUT",
+        "SINGUP": "SINGUP"
+    },
+    "MESSAGES":{
+        "SERV_LOGIN_FAIL":"LOGIN FAILED",
+        "SERV_SINGUP_FAIL":"SINGUP FAILED",
+        "SERV_SINGUP_OK":"SINGUP OK",
+        "SERV_PROFILE_FAIL":"PROFILE FAILED",
+        "SERV_DELETE_OK":"DELETE LINK OK",
+        "SERV_DELETE_FAIL":"DELETE LINK FAILED",
+        "SERV_ADD_OK":"ADD LINK OK",
+        "SERV_ADD_FAIL":"ADD LINK FAILED",
+        "SERV_LIST_FAIL":"LIST LINK FAILED"
+    }
+
+}

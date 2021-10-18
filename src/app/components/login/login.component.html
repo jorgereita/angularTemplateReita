@@ -1,0 +1,32 @@
+<body>
+  <header>
+    <app-navbar [state]="'SINGUP.TITLE'| translate "></app-navbar>
+  </header>
+  <main class="center">
+    <div>
+        <img src="../../../assets/images/logo_link.png" alt="Mo_Logo" class="login-logo">
+    </div>
+    <div class="mo-card login-card ">
+      <form [formGroup]="loginForm" class="form-size">
+        <h2 class="is-left"> {{"LOGIN.TITLE" | translate }} </h2>
+
+        <div class="input-container">
+          <label position="stacked" class="has-padding-b-1">{{"LOGIN.USER_TITLE" | translate }}</label>
+          <input type="text" formControlName="email" />
+        </div>
+
+ 
+        <div class="input-container">
+          <label position="stacked" class="has-padding-b-1">{{"LOGIN.PASS_TITLE" | translate }}</label>
+          <input type="password" autocomplete="off" formControlName="password" />
+        </div>
+
+        <button [attr.disabled]="!loginForm.valid ? '' : null"
+          [ngClass]="loginForm.valid?'mo-form-button active':'mo-form-button disabled'" (click)="login()">
+          {{"LOGIN.BUTTON_FORM" | translate }} </button>
+
+      </form>
+    </div>
+
+  </main>
+</body>

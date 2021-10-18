@@ -1,0 +1,159 @@
+$color-primary: #007AFF;
+$color-success: #007AFF;
+$color-dark-100: #000000;
+$color-dark: #131A27;
+$color-dark-40: #aaa49b;
+$color-blue: #215ea8;
+$color-white: #ffffff;
+$color-gray: #ebebeb;
+
+
+///------------------------------
+// PRINCIPAL STRUCTURE
+///------------------------------
+
+header {
+  padding: 1rem;
+  text-align: end;
+}
+
+///------------------------------
+// COMMONS HELPERS 
+///------------------------------
+
+.center {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.is-full {
+  height: 100%;
+  width: 100%;
+}
+.is-left{
+  text-align: left;
+}
+.is-rigth{
+  text-align: end;
+}
+.is-flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.has-padding-b-1 {
+  padding-bottom: 1rem;
+}
+
+.has-padding-l-1 {
+  padding-left: 1rem;
+}
+
+.has-padding-1 {
+  padding: 1rem;
+} 
+
+.has-padding-t-4 {
+  padding-top: 4rem;
+}
+
+.has-cursor-pointer {
+  cursor: pointer !important;
+}
+
+
+.mo-card {
+  box-shadow: 0px 0px 30px rgba(199, 199, 199, 0.55);
+  border-radius: 6px;
+}
+
+///------------------------------
+// Colors Common class 
+///------------------------------
+
+.border-primary-strong {
+  border-bottom: 3px solid $color-primary;
+}
+
+///------------------------------
+//  Common INPUT 
+///------------------------------
+input {
+  outline: 0;
+  background: transparent;
+  width: 100%;
+  border: 0;
+  margin: 8px 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid $color-dark-40;
+}
+
+input:focus {
+  outline: 0;
+  border: 1px solid $color-success;
+}
+
+.input-container {
+  text-align: left;
+}
+
+///------------------------------
+//  IMAGES 
+///------------------------------
+.login-logo {
+  width: 346px;
+  height: 212px;
+}
+
+
+///------------------------------
+//  Common BUTTONS 
+///------------------------------
+
+
+.mo-button-active {
+  background: none;
+  outline: 0;
+  box-sizing: border-box;
+  margin: 1em;
+  padding: 1em 2em;
+  border: 2px solid $color-primary;
+  color: $color-primary;
+  font-size: inherit;
+  font-weight: 800;
+  border-radius: 4px;
+  position: relative;
+  vertical-align: middle;
+  transition: color 0.25s;
+  &:hover {
+    border: 1px solid $color-primary;
+  }
+
+}
+
+.mo-form-button  {
+  width: 366px;
+  height: 48px;
+  margin-top: 42px;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+} 
+.active {
+  color: $color-white;
+  background-color: $color-primary;
+} 
+.disabled {
+  color: $color-dark;
+  background-color: $color-dark-40;
+}
